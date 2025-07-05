@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- LÓGICA DO DROPDOWN ---
+
     const accountTrigger = document.getElementById('account-dropdown-trigger');
     const accountMenu = document.getElementById('account-dropdown-menu');
 
@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LÓGICA DO CARROSSEL ---
     const track = document.querySelector('.carousel-track');
-    // É crucial que 'slides' seja definido APÓS 'track'
-    const slides = track ? Array.from(track.children) : []; 
+
+    const slides = track ? Array.from(track.children) : [];
     const nextButton = document.querySelector('.next-button');
     const prevButton = document.querySelector('.prev-button');
 
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LÓGICA DO MENU HAMBÚRGUER ---
     const hamburgerTrigger = document.querySelector('.hamburger-menu-trigger');
     const sidebar = document.querySelector('.sidebar');
     const sidebarOverlay = document.querySelector('.sidebar-overlay');

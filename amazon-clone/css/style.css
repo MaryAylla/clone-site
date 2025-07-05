@@ -1,4 +1,3 @@
-/* --- Configurações Gerais e Variáveis --- */
 :root {
     --amazon-dark-blue: #131921;
     --amazon-light-blue: #232f3e;
@@ -24,7 +23,6 @@ a {
 }
 
 
-/* --- Header / Navegação Principal --- */
 .main-header {
     background-color: var(--amazon-dark-blue);
     color: var(--amazon-text-white);
@@ -48,10 +46,12 @@ a {
 .header-location span {
     display: block;
 }
+
 .header-location span:first-child {
     font-size: 12px;
     color: var(--amazon-text-gray);
 }
+
 .header-location span:last-child {
     font-size: 14px;
     font-weight: bold;
@@ -59,18 +59,21 @@ a {
 
 .header-search {
     display: flex;
-    flex-grow: 1; /* Faz a barra de busca ocupar o espaço disponível */
+    flex-grow: 1;
 }
 
-.search-select, .search-input {
+.search-select,
+.search-input {
     border: none;
     padding: 10px;
 }
+
 .search-select {
     background-color: #f3f3f3;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
+
 .search-input {
     width: 100%;
 }
@@ -83,50 +86,48 @@ a {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+
 .search-button i {
     font-size: 16px;
 }
 
-/* ... (Estilos anteriores permanecem os mesmos) ... */
 
-/* --- Header / Navegação Principal --- */
-/* ... */
 
 .header-user-options {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* Alinha os itens no topo */
+    align-items: flex-start;
 }
 
-/* NOVO: Estilos para o container do dropdown e o menu */
+
 .user-option-container {
-    position: relative; /* Essencial para o posicionamento do dropdown */
-    padding: 5px; /* Adiciona uma área de respiro */
+    position: relative;
+    padding: 5px;
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* Posiciona o menu logo abaixo do container */
+    top: 100%;
     right: 0;
     background-color: #fff;
     color: #111;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 400px; /* Largura do dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
     padding: 20px;
-    display: none; /* Começa escondido */
+    display: none;
     z-index: 1000;
 }
 
-/* Classe que será adicionada pelo JS para mostrar o menu */
+
 .dropdown-menu.visible {
-    display: flex; /* Usamos flex para organizar as colunas internas */
+    display: flex;
     gap: 20px;
 }
 
 .dropdown-section {
-    flex: 1; /* Faz com que cada seção ocupe metade do espaço */
+    flex: 1;
 }
 
 .dropdown-section h3 {
@@ -156,9 +157,11 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 .user-option span:first-child {
     font-size: 12px;
 }
+
 .user-option span:last-child {
     font-size: 14px;
     font-weight: bold;
@@ -169,39 +172,39 @@ a {
     align-items: center;
     gap: 5px;
 }
+
 .cart-option i {
     font-size: 24px;
 }
 
 
-/* --- Navegação Secundária --- */
+
 .secondary-nav {
     background-color: var(--amazon-light-blue);
     padding: 10px;
 }
+
 .secondary-nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .secondary-nav a {
     font-size: 14px;
     font-weight: bold;
 }
 
-/* --- Conteúdo Principal --- */
-/* ... (Estilos anteriores permanecem os mesmos) ... */
 
-/* --- Conteúdo Principal --- */
 .main-content {
     padding: 20px;
-    max-width: 1500px; /* Define uma largura máxima para o conteúdo principal */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
-/* HERO SECTION / CARROSSEL */
+
 .hero-section {
-    position: relative; /* Ponto de referência para os botões */
+    position: relative;
     height: 350px;
     width: 100%;
 }
@@ -209,15 +212,14 @@ a {
 .carousel-container {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Esconde as partes do trilho que saem da tela */
+    overflow: hidden;
 }
 
 .carousel-track {
     display: flex;
     height: 100%;
-    /* A largura será 300% (3 imagens), o JS cuidará do movimento */
-    width: 300%; 
-    transition: transform 0.5s ease-in-out; /* A mágica da animação suave */
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
@@ -225,13 +227,13 @@ a {
     height: 100%;
 }
 
-/* Encontre este seletor no seu CSS */
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    /* FIX: Mude de 'cover' para 'contain' */
-    object-fit: cover; /* Garante que a imagem inteira apareça, sem cortes */
+
+    object-fit: cover;
 }
+
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -242,7 +244,7 @@ a {
     color: white;
     cursor: pointer;
     padding: 20px 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .prev-button {
@@ -253,7 +255,7 @@ a {
     right: 20px;
 }
 
-/* ... (Estilos do grid de produtos e rodapé permanecem os mesmos) ... */
+
 
 .product-grid-container {
     display: grid;
@@ -266,10 +268,12 @@ a {
     background-color: #fff;
     padding: 20px;
 }
+
 .product-card h2 {
     font-size: 21px;
     margin-bottom: 15px;
 }
+
 .product-image {
     height: 250px;
     display: flex;
@@ -277,25 +281,29 @@ a {
     align-items: center;
     margin-bottom: 15px;
 }
+
 .product-image img {
     max-width: 100%;
     max-height: 100%;
 }
+
 .product-card a {
     color: #007185;
     font-size: 13px;
 }
 
-/* --- Rodapé --- */
+
 .main-footer {
     color: var(--amazon-text-white);
 }
+
 .footer-back-to-top {
     background-color: var(--amazon-light-blue);
     text-align: center;
     padding: 15px;
     font-size: 13px;
 }
+
 .footer-links-container {
     background-color: var(--amazon-dark-blue);
     display: flex;
@@ -303,19 +311,24 @@ a {
     padding: 40px;
     border-bottom: 1px solid #3a4553;
 }
+
 .footer-links-column h3 {
     margin-bottom: 10px;
 }
+
 .footer-links-column ul {
     list-style: none;
 }
+
 .footer-links-column li {
     margin-bottom: 10px;
 }
+
 .footer-links-column a {
     color: var(--amazon-text-gray);
     font-size: 14px;
 }
+
 .footer-bottom {
     background-color: var(--amazon-dark-blue);
     text-align: center;
@@ -325,85 +338,82 @@ a {
 }
 
 
-/* Estilos para telas com largura máxima de 768px (tablets e celulares) */
+
 @media (max-width: 768px) {
 
-    /* --- Ajustes no Cabeçalho Principal --- */
+
     .main-header {
-        flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+        flex-wrap: wrap;
         padding: 10px 15px;
     }
 
     .header-location,
     .user-option-container,
     .user-option:not(.cart-option) {
-        display: none; /* Esconde elementos não essenciais para economizar espaço */
+        display: none;
     }
 
     .header-search {
-        width: 100%; /* Faz a barra de busca ocupar toda a largura */
-        order: 3; /* Força a barra de busca para a última posição (terceira linha) */
+        width: 100%;
+        order: 3;
         margin-top: 10px;
     }
-    
+
     .header-logo {
-        order: 1; /* Garante que o logo venha primeiro */
+        order: 1;
     }
-    
+
     .header-user-options {
-        order: 2; /* Garante que o carrinho venha depois do logo */
-        margin-left: auto; /* Empurra o carrinho para a direita */
+        order: 2;
+        margin-left: auto;
     }
 
-    /* --- Ajustes na Navegação Secundária --- */
     .secondary-nav ul {
-        overflow-x: auto; /* Cria uma barra de rolagem horizontal se os itens não couberem */
-        white-space: nowrap; /* Impede que os itens quebrem a linha */
-        padding-bottom: 10px; /* Espaço para a barra de rolagem não ficar colada */
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
     }
 
-    /* Esconde a barra de rolagem visualmente (mas ainda funciona) */
+
     .secondary-nav ul::-webkit-scrollbar {
         height: 3px;
     }
 
-    /* --- Ajustes no Conteúdo Principal --- */
     .main-content {
         padding: 10px;
     }
 
     .hero-section {
-        height: 200px; /* Reduz a altura do carrossel */
+        height: 200px;
     }
 
     .carousel-button {
-        font-size: 2em; /* Diminui o tamanho dos botões do carrossel */
-    }
-    
-    .product-grid-container {
-        grid-template-columns: 1fr 1fr; /* Muda para um grid de 2 colunas */
+        font-size: 2em;
     }
 
-    /* --- Ajustes no Rodapé --- */
+    .product-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .footer-links-container {
-        flex-direction: column; /* Empilha as colunas de links verticalmente */
+        flex-direction: column;
         gap: 30px;
-        align-items: center; /* Centraliza as colunas */
+        align-items: center;
         text-align: center;
     }
 }
 
 
-/* Estilos para telas com largura máxima de 480px (celulares) */
 @media (max-width: 480px) {
     .product-grid-container {
-        grid-template-columns: 1fr; /* Muda para uma única coluna em telas bem pequenas */
+        grid-template-columns: 1fr;
     }
 
     .main-header {
-        justify-content: space-between; /* Garante que logo e carrinho fiquem nas pontas */
+        justify-content: space-between;
     }
 }
+
 .sidebar-overlay {
     position: fixed;
     top: 0;
@@ -412,7 +422,6 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1999;
-    /* Começa invisível */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
@@ -420,7 +429,7 @@ a {
 
 .sidebar-overlay.active {
     opacity: 1;
-    pointer-events: auto; /* Permite clicar para fechar */
+    pointer-events: auto;
 }
 
 .sidebar {
@@ -433,7 +442,6 @@ a {
     background-color: var(--amazon-text-white);
     color: var(--amazon-dark-blue);
     z-index: 2000;
-    /* Começa fora da tela */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
 }
