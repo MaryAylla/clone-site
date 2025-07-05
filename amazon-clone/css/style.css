@@ -1,0 +1,486 @@
+/* --- Configurações Gerais e Variáveis --- */
+:root {
+    --amazon-dark-blue: #131921;
+    --amazon-light-blue: #232f3e;
+    --amazon-orange: #febd69;
+    --amazon-text-white: #ffffff;
+    --amazon-text-gray: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e3e6e6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--amazon-text-white);
+}
+
+
+/* --- Header / Navegação Principal --- */
+.main-header {
+    background-color: var(--amazon-dark-blue);
+    color: var(--amazon-text-white);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+.header-logo img {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.header-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-location span {
+    display: block;
+}
+.header-location span:first-child {
+    font-size: 12px;
+    color: var(--amazon-text-gray);
+}
+.header-location span:last-child {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header-search {
+    display: flex;
+    flex-grow: 1; /* Faz a barra de busca ocupar o espaço disponível */
+}
+
+.search-select, .search-input {
+    border: none;
+    padding: 10px;
+}
+.search-select {
+    background-color: #f3f3f3;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.search-input {
+    width: 100%;
+}
+
+.search-button {
+    background-color: var(--amazon-orange);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.search-button i {
+    font-size: 16px;
+}
+
+/* ... (Estilos anteriores permanecem os mesmos) ... */
+
+/* --- Header / Navegação Principal --- */
+/* ... */
+
+.header-user-options {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+/* NOVO: Estilos para o container do dropdown e o menu */
+.user-option-container {
+    position: relative; /* Essencial para o posicionamento do dropdown */
+    padding: 5px; /* Adiciona uma área de respiro */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Posiciona o menu logo abaixo do container */
+    right: 0;
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 400px; /* Largura do dropdown */
+    padding: 20px;
+    display: none; /* Começa escondido */
+    z-index: 1000;
+}
+
+/* Classe que será adicionada pelo JS para mostrar o menu */
+.dropdown-menu.visible {
+    display: flex; /* Usamos flex para organizar as colunas internas */
+    gap: 20px;
+}
+
+.dropdown-section {
+    flex: 1; /* Faz com que cada seção ocupe metade do espaço */
+}
+
+.dropdown-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.dropdown-section ul {
+    list-style: none;
+}
+
+.dropdown-section ul li {
+    margin-bottom: 8px;
+}
+
+.dropdown-section ul a {
+    color: #007185;
+    font-size: 14px;
+}
+
+.dropdown-section ul a:hover {
+    color: var(--amazon-orange);
+    text-decoration: underline;
+}
+
+.user-option {
+    display: flex;
+    flex-direction: column;
+}
+.user-option span:first-child {
+    font-size: 12px;
+}
+.user-option span:last-child {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-option {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.cart-option i {
+    font-size: 24px;
+}
+
+
+/* --- Navegação Secundária --- */
+.secondary-nav {
+    background-color: var(--amazon-light-blue);
+    padding: 10px;
+}
+.secondary-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.secondary-nav a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --- Conteúdo Principal --- */
+/* ... (Estilos anteriores permanecem os mesmos) ... */
+
+/* --- Conteúdo Principal --- */
+.main-content {
+    padding: 20px;
+    max-width: 1500px; /* Define uma largura máxima para o conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* HERO SECTION / CARROSSEL */
+.hero-section {
+    position: relative; /* Ponto de referência para os botões */
+    height: 350px;
+    width: 100%;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Esconde as partes do trilho que saem da tela */
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    /* A largura será 300% (3 imagens), o JS cuidará do movimento */
+    width: 300%; 
+    transition: transform 0.5s ease-in-out; /* A mágica da animação suave */
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* Encontre este seletor no seu CSS */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    /* FIX: Mude de 'cover' para 'contain' */
+    object-fit: cover; /* Garante que a imagem inteira apareça, sem cortes */
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+    padding: 20px 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+/* ... (Estilos do grid de produtos e rodapé permanecem os mesmos) ... */
+
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+}
+.product-card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.product-image {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.product-card a {
+    color: #007185;
+    font-size: 13px;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    color: var(--amazon-text-white);
+}
+.footer-back-to-top {
+    background-color: var(--amazon-light-blue);
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+.footer-links-container {
+    background-color: var(--amazon-dark-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    border-bottom: 1px solid #3a4553;
+}
+.footer-links-column h3 {
+    margin-bottom: 10px;
+}
+.footer-links-column ul {
+    list-style: none;
+}
+.footer-links-column li {
+    margin-bottom: 10px;
+}
+.footer-links-column a {
+    color: var(--amazon-text-gray);
+    font-size: 14px;
+}
+.footer-bottom {
+    background-color: var(--amazon-dark-blue);
+    text-align: center;
+    font-size: 12px;
+    color: var(--amazon-text-gray);
+    padding: 20px;
+}
+
+
+/* Estilos para telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+
+    /* --- Ajustes no Cabeçalho Principal --- */
+    .main-header {
+        flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+        padding: 10px 15px;
+    }
+
+    .header-location,
+    .user-option-container,
+    .user-option:not(.cart-option) {
+        display: none; /* Esconde elementos não essenciais para economizar espaço */
+    }
+
+    .header-search {
+        width: 100%; /* Faz a barra de busca ocupar toda a largura */
+        order: 3; /* Força a barra de busca para a última posição (terceira linha) */
+        margin-top: 10px;
+    }
+    
+    .header-logo {
+        order: 1; /* Garante que o logo venha primeiro */
+    }
+    
+    .header-user-options {
+        order: 2; /* Garante que o carrinho venha depois do logo */
+        margin-left: auto; /* Empurra o carrinho para a direita */
+    }
+
+    /* --- Ajustes na Navegação Secundária --- */
+    .secondary-nav ul {
+        overflow-x: auto; /* Cria uma barra de rolagem horizontal se os itens não couberem */
+        white-space: nowrap; /* Impede que os itens quebrem a linha */
+        padding-bottom: 10px; /* Espaço para a barra de rolagem não ficar colada */
+    }
+
+    /* Esconde a barra de rolagem visualmente (mas ainda funciona) */
+    .secondary-nav ul::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    /* --- Ajustes no Conteúdo Principal --- */
+    .main-content {
+        padding: 10px;
+    }
+
+    .hero-section {
+        height: 200px; /* Reduz a altura do carrossel */
+    }
+
+    .carousel-button {
+        font-size: 2em; /* Diminui o tamanho dos botões do carrossel */
+    }
+    
+    .product-grid-container {
+        grid-template-columns: 1fr 1fr; /* Muda para um grid de 2 colunas */
+    }
+
+    /* --- Ajustes no Rodapé --- */
+    .footer-links-container {
+        flex-direction: column; /* Empilha as colunas de links verticalmente */
+        gap: 30px;
+        align-items: center; /* Centraliza as colunas */
+        text-align: center;
+    }
+}
+
+
+/* Estilos para telas com largura máxima de 480px (celulares) */
+@media (max-width: 480px) {
+    .product-grid-container {
+        grid-template-columns: 1fr; /* Muda para uma única coluna em telas bem pequenas */
+    }
+
+    .main-header {
+        justify-content: space-between; /* Garante que logo e carrinho fiquem nas pontas */
+    }
+}
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1999;
+    /* Começa invisível */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto; /* Permite clicar para fechar */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 80%;
+    height: 100%;
+    background-color: var(--amazon-text-white);
+    color: var(--amazon-dark-blue);
+    z-index: 2000;
+    /* Começa fora da tela */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--amazon-light-blue);
+    color: var(--amazon-text-white);
+}
+
+.sidebar-header h3 {
+    font-size: 18px;
+}
+
+.sidebar-close-button {
+    background: none;
+    border: none;
+    color: var(--amazon-text-white);
+    font-size: 2.5em;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #111;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #e3e6e6;
+}
+
+.sidebar-menu hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 5px 0;
+}

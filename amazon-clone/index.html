@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone da Amazon</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="#">
+                <img src="./images/amazon-logo.png" alt="Amazon Logo">
+            </a>
+        </div>
+        
+
+        <div class="header-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+                <span>Enviar para</span>
+                <span>Brasil</span>
+            </div>
+        </div>
+
+        <div class="header-search">
+            <select class="search-select">
+                <option>Todos</option>
+            </select>
+            <input type="text" class="search-input" placeholder="Pesquisar na Amazon.com.br">
+            <button class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="header-user-options">
+            
+            <div class="user-option-container" id="account-dropdown-trigger">
+                <a href="#" class="user-option">
+                    <span>Olá, faça seu login</span>
+                    <span>Contas e Listas</span>
+                </a>
+
+                <div class="dropdown-menu" id="account-dropdown-menu">
+                    <div class="dropdown-section">
+                        <h3>Suas Listas</h3>
+                        <ul>
+                            <li><a href="#">Criar uma lista</a></li>
+                            <li><a href="#">Encontrar uma lista</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-section">
+                        <h3>Sua Conta</h3>
+                        <ul>
+                            <li><a href="#">Sua Conta</a></li>
+                            <li><a href="#">Seus Pedidos</a></li>
+                            <li><a href="#">Sua Inscrição Prime</a></li>
+                            <li><a href="#">Gerencie seu conteúdo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="user-option">
+                <span>Devoluções</span>
+                <span>e Pedidos</span>
+            </a>
+
+            <a href="#" class="user-option cart-option">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Carrinho</span>
+            </a>
+        </div>
+    </header>
+
+<nav class="secondary-nav">
+        <ul>
+            <li class="hamburger-menu-trigger"><a href="#"><i class="fa-solid fa-bars"></i> Todos</a></li>
+            <li><a href="#">Ofertas do Dia</a></li>
+            <li><a href="#">Atendimento ao Cliente</a></li>
+            <li><a href="#">Cartões-presente</a></li>
+            <li><a href="#">Vender</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="images/download.jpg" alt="Promoção 1"></div>
+                    <div class="carousel-slide"><img src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg" alt="Promoção 2"></div>
+                    <div class="carousel-slide"><img src="https://m.media-amazon.com/images/I/61CiqVTRBEL._SX3000_.jpg" alt="Promoção 3"></div>
+                </div>
+            </div>
+            <button class="carousel-button prev-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-button next-button"><i class="fa-solid fa-chevron-right"></i></button>
+        </section>
+
+        <section class="product-grid-container">
+            </section>
+
+        <section class="product-grid-container">
+            <div class="product-card">
+                <h2>Ofertas em PCs</h2>
+                <div class="product-image">
+                    <img src="./images/product-placeholder.jpg" alt="Produto de PC">
+                </div>
+                <a href="#">Comprar agora</a>
+            </div>
+            <div class="product-card">
+                <h2>Dispositivos Amazon</h2>
+                <div class="product-image">
+                    <img src="./images/product-placeholder2.jpg" alt="Dispositivo Amazon">
+                </div>
+                <a href="#">Veja mais</a>
+            </div>
+            <div class="product-card">
+                <h2>Eletrônicos</h2>
+                <div class="product-image">
+                    <img src="./images/product-placeholder3.jpg" alt="Eletrônicos">
+                </div>
+                <a href="#">Descubra</a>
+            </div>
+            <div class="product-card">
+                <h2>Brinquedos em oferta</h2>
+                <div class="product-image">
+                    <img src="./images/product-placeholder4.jpg" alt="Brinquedos">
+                </div>
+                <a href="#">Aproveite</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-back-to-top">
+            Voltar ao início
+        </div>
+        <div class="footer-links-container">
+            <div class="footer-links-column">
+                <h3>Conheça-nos</h3>
+                <ul>
+                    <li><a href="#">Informações corporativas</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Comunicados à imprensa</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-column">
+                <h3>Ganhe dinheiro conosco</h3>
+                <ul>
+                    <li><a href="#">Venda na Amazon</a></li>
+                    <li><a href="#">Proteja e construa sua marca</a></li>
+                    <li><a href="#">Publique seus livros</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-column">
+                <h3>Deixe-nos ajudar você</h3>
+                <ul>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Frete e prazo de entrega</a></li>
+                    <li><a href="#">Devoluções e reembolsos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2025, Amazon-Clone.com, Inc. ou suas afiliadas</p>
+        </div>
+    </footer>
+
+</body>
+</html>
